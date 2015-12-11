@@ -3,27 +3,23 @@
     namespace ThemisMin\Nencode;
 
 
-    /**
-     * Node 对象
-     * @package ThemisMin\Nencode
-     */
     class Node
     {
         /**
          * 保存node id
          * @var string
          */
-        private $nid;
+        public $nid;
         /**
          * 保存IP地址
          * @var string
          */
-        private $ip;
+        public $ip;
         /**
          * 保存端口号
          * @var integer
          */
-        private $port;
+        public $port;
 
         /**
          * 析构方法, 初始化模型
@@ -40,47 +36,51 @@
         }
 
         /**
-         * 使外部可获取私有属性
-         * @param  string $name 属性名称
-         * @return mixed       属性值
+         * @return string
          */
-        public function __get($name)
+        public function getNid()
         {
-            // 检查属性是否存在
-            if (isset($this->$name))
-                return $this->$name;
-
-            return null;
+            return $this->nid;
         }
 
         /**
-         * 使外部可直接对私有属性赋值
-         * @param string $name 属性名称
-         * @param mixed $value 属性值
-         * @return void
+         * @param string $nid
          */
-        public function __set($name, $value)
+        public function setNid($nid)
         {
-            $this->$name = $value;
+            $this->nid = $nid;
         }
 
         /**
-         * 检查属性是否设置
-         * @param  string $name 属性名称
-         * @return boolean       是否设置
+         * @return string
          */
-        public function __isset($name)
+        public function getIp()
         {
-            return isset($this->$name);
+            return $this->ip;
         }
 
         /**
-         * 将Node模型转换为数组
-         * @return array 转换后的数组
+         * @param string $ip
          */
-        public function to_array()
+        public function setIp($ip)
         {
-            return array('nid' => $this->nid, 'ip' => $this->ip, 'port' => $this->port);
+            $this->ip = $ip;
+        }
+
+        /**
+         * @return int
+         */
+        public function getPort()
+        {
+            return $this->port;
+        }
+
+        /**
+         * @param int $port
+         */
+        public function setPort($port)
+        {
+            $this->port = $port;
         }
 
     }
