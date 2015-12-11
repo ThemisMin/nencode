@@ -2,6 +2,10 @@
 
     namespace ThemisMin\Nencode;
 
+    /**
+     * nodes 编码
+     * @package ThemisMin\Nencode
+     */
     class Nencode
     {
 

@@ -3,6 +3,10 @@
     namespace ThemisMin\Nencode;
 
 
+    /**
+     * Node 对象
+     * @package ThemisMin\Nencode
+     */
     class Node
     {
         /**
